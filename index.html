@@ -1,1 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maths Partner</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <!-- Main Container of Program -->
+    <div id="container">
+
+        <!--2. Memory Storage Section -->
+        <section class="newBar">
+            <h1>Maths Partner</h1>
+            <button id="savaData">SAVED SOLUTIONS</button>
+        </section>
+
+        <!-- 3.Input & Search Section for Problem -->
+        <div class="problemSelect">
+            <!--Input Problem-->
+            <div>
+                <label for="problem">Problem</label>
+                <br />
+                <input type="text" id=rtner" name="problem" placeholder="TYPE HERE..............." />
+            </div>
+
+            <!--Problem Options -->
+            <div class="prob_box">
+                <label for="selectCategory">Select Category</label>
+                <br />
+                <select name="selectCategory" id="select">
+                    <option value="simplify">Simlify</option>
+                    <option value="integrate">integration</option>
+                    <option value="factor">Factor</option>
+                    <option value="derive">Derive</option>
+                    <option value="zeroes">Find 0's</option>
+                    <option value="tangent">Find Tangent</option>
+                    <option value="area">Area Under Curve</option>
+                    <option value="cos">Cosine</option>
+                    <option value="sin">Sine</option>
+                    <option value="tan">Tangent</option>
+                    <option value="arccos">Inverse Cosine</option>
+                    <option value="arcsin">Inverse Sine</option>
+                    <option value="arctan">Inverse Tangent</option>
+                    <option value="abs">Absolute Value</option>
+                </select>
+            </div>
+            <!--Button for Find Solution of Problems-->
+            <div>
+                <button id="search" onclick="find()"><i class="fa fa-search" style="font-size: 28px;"></i></button>
+            </div>
+        </div>
+
+        <!-- 4. Result Container -->
+        <section class="mainContainer">
+            <div id="textAnswer">
+                <h2 id="textInput"></h2>
+                <p id="answer"></p>
+                <i id="deleteButton" class="fa fa-trash-o" style="font-size:30px"></i>
+            </div>
+        </section>
+
+        <div id="history">
+            <!--History Of Results in Table-->
+            <table>
+                <thead>
+                    <th>Operation</th>
+                    <th>Result</th>
+                </thead>
+                <tbody id="his"></tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <script src="./App.js"></script>
+</body>
+
+</html>
